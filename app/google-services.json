@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "967430261684",
+    "project_id": "fir-databasehospi",
+    "storage_bucket": "fir-databasehospi.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:967430261684:android:2bc87fdc8204b74ecfc0e1",
+        "android_client_info": {
+          "package_name": "us.aplicaciones.firebasesalud"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZbP-MBXh6zjhAR_nXBQL7i4RWLpk5ZyM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

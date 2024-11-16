@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Conexion RealTime Database</string>
+    <string name="buscar_paciente">Buscar Paciente</string>
+    <string name="nuevo_paciente">Nuevo Paciente</string>
+    <string name="nuhsapaciente">NuhsaPaciente</string>
+    <string name="lista_de_pacientes">Lista de Pacientes</string>
+    <string name="firebasesalud">FirebaseSalud</string>
+</resources>
