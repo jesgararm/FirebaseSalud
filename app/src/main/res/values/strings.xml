@@ -5,4 +5,5 @@
     <string name="nuhsapaciente">NuhsaPaciente</string>
     <string name="lista_de_pacientes">Lista de Pacientes</string>
     <string name="firebasesalud">FirebaseSalud</string>
+    <string name="eliminar">Eliminar</string>
 </resources>
