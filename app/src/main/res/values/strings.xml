@@ -6,4 +6,5 @@
     <string name="lista_de_pacientes">Lista de Pacientes</string>
     <string name="firebasesalud">FirebaseSalud</string>
     <string name="eliminar">Eliminar</string>
+    <string name="id_nombre">ID: Nombre</string>
 </resources>
