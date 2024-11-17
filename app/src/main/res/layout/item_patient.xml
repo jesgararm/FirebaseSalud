@@ -2,16 +2,37 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:padding="8dp">
 
     <TextView
         android:id="@+id/textViewPatientInfo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="192dp"
+        android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="@string/id_nombre"
+        android:text="@string/nuhsapaciente"
         android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textViewNombre"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:paddingBottom="4dp"
+        android:text="@string/nombre"
+        android:textColor="#757575"
+        android:textSize="14sp" />
+
+    <!-- Nuevo TextView: Diagnóstico del paciente -->
+
+    <TextView
+        android:id="@+id/textViewPatientGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:paddingBottom="8dp"
+        android:text="@string/grupo_sangu_neo"
+        android:textColor="#757575"
+        android:textSize="14sp" />
 
     <Button
         android:id="@+id/buttonDeletePatient"

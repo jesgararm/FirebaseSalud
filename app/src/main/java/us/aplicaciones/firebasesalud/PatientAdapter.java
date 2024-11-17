@@ -38,8 +38,8 @@ public class PatientAdapter extends RecyclerView.Adapter<PatientAdapter.PatientV
     public void onBindViewHolder(@NonNull PatientViewHolder holder, int position) {
         Paciente patient = patientList.get(position);
         holder.textViewId.setText("Nuhsa: " + patient.getNuhsa());
-        holder.textViewName.setText("Nombre: " + patient.getNombre() + " " + patient.getApellidos() + "\n"
-                + "Grupo sanguíneo: " + patient.getGrupoSanguineo());
+        holder.textViewName.setText("Nombre: " + patient.getNombre() + " " + patient.getApellidos());
+        holder.textViewBloodGroup.setText("Grupo sanguíneo: " + patient.getGrupoSanguineo());
         // Evento del botón Eliminar
         holder.buttonDeletePatient.setOnClickListener(v -> {
             DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Pacientes");
@@ -67,13 +67,15 @@ public class PatientAdapter extends RecyclerView.Adapter<PatientAdapter.PatientV
         TextView textViewId;
         TextView textViewName;
 
+        TextView textViewBloodGroup;
         Button buttonDeletePatient;
 
         @SuppressLint("CutPasteId")
         public PatientViewHolder(@NonNull View itemView) {
             super(itemView);
-            textViewId = itemView.findViewById(android.R.id.text1);
-            textViewName = itemView.findViewById(android.R.id.text2);
+            textViewId = itemView.findViewById(R.id.textViewPatientInfo);
+            textViewName = itemView.findViewById(R.id.textViewNombre);
+            textViewBloodGroup = itemView.findViewById(R.id.textViewPatientGroup);
             buttonDeletePatient = itemView.findViewById(R.id.buttonDeletePatient);
         }
     }

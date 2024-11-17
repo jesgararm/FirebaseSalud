@@ -7,4 +7,6 @@
     <string name="firebasesalud">FirebaseSalud</string>
     <string name="eliminar">Eliminar</string>
     <string name="id_nombre">ID: Nombre</string>
+    <string name="grupo_sangu_neo">Grupo Sanguíneo: -</string>
+    <string name="nombre">Nombre:</string>
 </resources>
