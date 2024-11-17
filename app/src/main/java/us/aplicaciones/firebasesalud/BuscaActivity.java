@@ -4,7 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,11 +26,12 @@ public class BuscaActivity extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference puntoAcceso;
 
+    private Button buttonEditPatient;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_busca);
-
         //Recupero el String de nuhsa que me pasó la anterior activity
         nuhsa=getIntent().getStringExtra(Constantes.nuhsa);
 
@@ -68,6 +72,25 @@ public class BuscaActivity extends AppCompatActivity {
             }
         });
 
-
+        //Botón para editar
+        // Inicializar el botón
+        buttonEditPatient = findViewById(R.id.buttonEditPatient);
+        // Añadir un listener al botón
+        // Configurar el clic en el botón
+        buttonEditPatient.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openEditPatientActivity();
+            }
+        });
+    }
+    private void openEditPatientActivity() {
+        // Crear el Intent para abrir EditPatientActivity
+        Intent intent = new Intent(BuscaActivity.this, EditPatientActivity.class);
+        intent.putExtra("nuhsa", this.nuhsa);
+        intent.putExtra("nombre", this.nombre.getText().toString());
+        intent.putExtra("apellidos", this.apellidos.getText().toString());
+        intent.putExtra("grupoSanguineo", this.grupoSanguineo.getText().toString());
+        startActivity(intent);
     }
 }

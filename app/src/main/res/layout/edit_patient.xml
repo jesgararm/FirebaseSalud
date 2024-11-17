@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Campo para el ID del paciente (no editable) -->
+    <EditText
+        android:id="@+id/editTextPatientId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nuhsa"
+        android:enabled="false" />
+
+    <!-- Campo para el nombre -->
+    <EditText
+        android:id="@+id/editTextPatientName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre" />
+
+    <!-- Campo para el correo -->
+    <EditText
+        android:id="@+id/editTextPatientSurname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Apellidos" />
+
+    <!-- Campo para la fecha de registro -->
+    <EditText
+        android:id="@+id/editTextPatientGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Grupo Sanguíneo" />
+
+    <!-- Botón para guardar cambios -->
+    <Button
+        android:id="@+id/buttonSaveChanges"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar Cambios"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

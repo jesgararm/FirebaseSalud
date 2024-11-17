@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="us.aplicaciones.firebasesalud">
+    package="us.aplicaciones.firebasesalud" >
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,8 @@
         android:label="@string/firebasesalud"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ConexionRealTimeDatabase">
+        android:theme="@style/Theme.ConexionRealTimeDatabase" >
+        <activity android:name=".EditPatientActivity" />
         <activity
             android:name=".ListPatient"
             android:exported="false" />
@@ -19,7 +20,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            tools:ignore="IntentFilterExportedReceiver">
+            tools:ignore="IntentFilterExportedReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

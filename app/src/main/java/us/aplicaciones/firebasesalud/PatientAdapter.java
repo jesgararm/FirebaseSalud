@@ -2,6 +2,7 @@ package us.aplicaciones.firebasesalud;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,6 +41,15 @@ public class PatientAdapter extends RecyclerView.Adapter<PatientAdapter.PatientV
         holder.textViewId.setText("Nuhsa: " + patient.getNuhsa());
         holder.textViewName.setText("Nombre: " + patient.getNombre() + " " + patient.getApellidos());
         holder.textViewBloodGroup.setText("Grupo sanguíneo: " + patient.getGrupoSanguineo());
+        // Botón para editar
+        holder.buttonEditPatient.setOnClickListener(v -> {
+            Intent intent = new Intent(v.getContext(), EditPatientActivity.class);
+            intent.putExtra("nuhsa", patient.getNuhsa());
+            intent.putExtra("nombre", patient.getNombre());
+            intent.putExtra("apellidos", patient.getApellidos());
+            intent.putExtra("grupoSanguineo", patient.getGrupoSanguineo());
+            v.getContext().startActivity(intent);
+        });
         // Evento del botón Eliminar
         holder.buttonDeletePatient.setOnClickListener(v -> {
             DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Pacientes");
@@ -68,7 +78,7 @@ public class PatientAdapter extends RecyclerView.Adapter<PatientAdapter.PatientV
         TextView textViewName;
 
         TextView textViewBloodGroup;
-        Button buttonDeletePatient;
+        Button buttonDeletePatient, buttonEditPatient;
 
         @SuppressLint("CutPasteId")
         public PatientViewHolder(@NonNull View itemView) {
@@ -77,6 +87,7 @@ public class PatientAdapter extends RecyclerView.Adapter<PatientAdapter.PatientV
             textViewName = itemView.findViewById(R.id.textViewNombre);
             textViewBloodGroup = itemView.findViewById(R.id.textViewPatientGroup);
             buttonDeletePatient = itemView.findViewById(R.id.buttonDeletePatient);
+            buttonEditPatient = itemView.findViewById(R.id.buttonEditPatient);
         }
     }
 }
